@@ -3,6 +3,9 @@
 ## 1. Test Case
 Refer to the test cases documentation here: [Test Case Spreadsheet](https://docs.google.com/spreadsheets/d/18b-w86IPKSSjC89y4eT9zMYsrCVERXw4/edit?usp=sharing&ouid=111572525109087846311&rtpof=true&sd=true)
 
+[DISC Personality Test](https://docs.google.com/spreadsheets/d/19FvVIUEYwSixArb3-pZfgr9vvdFznWA8/edit?usp=sharing&ouid=111572525109087846311&rtpof=true&sd=true)
+
+
 ## 2. Dependencies
 Install the required dependencies:
 ```bash
