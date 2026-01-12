@@ -1,0 +1,29 @@
+{
+  "name": "test-qwiik-ikhwan",
+  "version": "1.0.0",
+  "description": "test qwiik",
+  "homepage": "https://github.com/ikhwanwan07/test-qwiik-ikhwan#readme",
+  "bugs": {
+    "url": "https://github.com/ikhwanwan07/test-qwiik-ikhwan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikhwanwan07/test-qwiik-ikhwan.git"
+  },
+  "license": "ISC",
+  "author": "ikhwan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.6"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "dotenv": "^17.2.3",
+    "faker": "^5.5.3",
+    "zod": "^4.3.5"
+  }
+}
