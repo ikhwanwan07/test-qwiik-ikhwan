@@ -16,15 +16,20 @@ npm install -D @playwright/test
 ## 3. How to Run Playwright
 Execute the tests using:
 ```bash
-npx playwright test
+npm run test
 ```
 
 For running tests in headed mode:
 ```bash
-npx playwright test --headed
+npm run test:headed
 ```
 
-For running a specific test file:
+For show report:
 ```bash
-npx playwright test path/to/test.spec.ts
+npm run report
 ```
+Report :
+
+![alt text](./playwright-report/resukt.png?raw=true)
+
+

@@ -14,7 +14,12 @@
   "author": "ikhwan",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test tests --project=chromium",
+    "test:headed": "playwright test tests --headed",
+    "report": "playwright show-report",
+    "test:debug": "playwright test tests --debug"
+  },
   "devDependencies": {
     "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.57.0",
