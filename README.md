@@ -30,6 +30,6 @@ npm run report
 ```
 Report :
 
-![alt text](./playwright-report/resukt.png?raw=true)
+![alt text](./src/result.png?raw=true)
 
 
