@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../page/loginPage.js';
 import { CheckoutPage } from '../page/checkoutPage.js';
 import { faker } from '@faker-js/faker';
+import { FilterPage } from '../page/filterPage.js';
 
 
 const username = process.env.username;
@@ -15,43 +16,22 @@ test.describe('SACE Demo UI Tests', () => {
     });
    
     test('should success to Filter Z to A', async ({ page }) => {
-        await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .waitFor();
-        await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .selectOption('za');
-        const firstProduct = page.locator('.inventory_item_name').first();
-        await expect(firstProduct).toHaveText('Test.allTheThings() T-Shirt (Red)')
+        const Filterpage = new FilterPage(page);
+        await Filterpage.selectFilterOptionZA();
+        await Filterpage.getFirstProductNameZA();
     });
 
     test('should success to Filter Price low to high', async ({ page }) => {
-        await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .waitFor();
-        await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .selectOption('lohi');
-        const firstProduct = page.locator('.inventory_item_name').first();
-        await expect(firstProduct).toHaveText('Sauce Labs Onesie')
-        ;
+        const Filterpage = new FilterPage(page);
+        await Filterpage.selectFilterOptionLH();
+        await Filterpage.getFirstProductNameLH();
     });
 
     test('should success to Filter Price high to low', async ({ page }) => {
-         await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .waitFor();
-        await page
-        .locator('//*[@id="header_container"]/div[2]/div/span/select')
-        .first()
-        .selectOption('hilo'); 
-        const firstProduct = page.locator('.inventory_item_name').first();
-        await expect(firstProduct).toHaveText('Sauce Labs Fleece Jacket');  
+        const Filterpage = new FilterPage(page);
+        await Filterpage.selectFilterOptionHL();
+        await Filterpage.getFirstProductNameHL();   
+          
     });
 
     test('Process checkout', async ({ page }) => {
